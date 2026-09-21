@@ -1,0 +1,1131 @@
+/* ======================================
+   SHELA SAHARA
+   OTHER PROJECTS PAGE
+====================================== */
+
+
+/* ================= ROOT ================= */
+
+:root {
+
+    --bg: #F5F5F7;
+    --white: #FFFFFF;
+    --card: #FBFBFD;
+
+    --text: #1D1D1F;
+    --light: #6E6E73;
+
+    --border: #D2D2D7;
+
+    --blue: #113BAD;
+
+    --shadow: 0 20px 60px rgba(0,0,0,.08);
+
+    --max-width: 1100px;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.7;
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+}
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--max-width);
+
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 999;
+
+    background: rgba(245,245,247,.90);
+
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid #ECECEC;
+}
+
+.nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 0;
+}
+
+.logo {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+}
+
+nav a {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #555;
+
+    transition: .3s;
+}
+
+nav a:hover {
+
+    color: #000;
+}
+
+
+/* ================= HERO ================= */
+
+.project-hero {
+    min-height: 680px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("others hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.38);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+    padding: 120px 30px 80px;
+
+    color: white;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-label {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: .85;
+}
+
+.hero-content h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 5.5rem;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+
+    font-size: 1.2rem;
+
+    font-weight: 400;
+
+    opacity: .9;
+}
+
+
+/* ================= PROJECT SECTION ================= */
+
+.project-section {
+
+    padding: 120px 0;
+
+    background: var(--bg);
+}
+
+.email-section {
+
+    background: #FFFFFF;
+}
+
+.additional-section {
+
+    background: var(--bg);
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.section-label {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #999;
+
+    text-transform: uppercase;
+}
+
+.section-heading {
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 4rem;
+
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    margin-bottom: 8px;
+}
+
+.project-type {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #777;
+}
+
+.section-description {
+
+    max-width: 700px;
+
+    font-size: 17px;
+
+    color: var(--light);
+}
+
+
+/* ================= PROJECT INTRO ================= */
+
+.project-intro {
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.project-intro p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #555;
+
+    margin-bottom: 18px;
+}
+
+.project-intro strong {
+
+    color: #1D1D1F;
+
+    font-weight: 600;
+}
+
+/* ================= SOCIAL MEDIA ================= */
+
+.social-media-layout {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* MICCI IMAGES */
+
+.social-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.image-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #E2E2E5;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.04);
+    transition: .35s;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ================= SCREENSHOT ================= */
+
+.screenshot-card {
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #E2E2E5;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.04);
+
+    width: 100%;
+
+    margin: 0;
+}
+
+.screenshot-card img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+/* ================= EMAIL MARKETING ================= */
+
+.email-section {
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 70px;
+
+    align-items: start;
+
+    margin-top: 70px;
+
+}
+
+
+/* ================= LEFT CONTENT ================= */
+
+.email-content {
+
+    padding-top: 10px;
+
+}
+
+.email-content .section-label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #999;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+
+}
+
+.email-content h2 {
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    color: #1D1D1F;
+
+    margin: 0 0 28px;
+
+}
+
+.email-content p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #555;
+
+    margin-bottom: 22px;
+
+}
+
+.email-details {
+
+    margin-top: 35px;
+
+}
+
+.email-details h3 {
+
+    font-size: 20px;
+
+    color: #1D1D1F;
+
+    margin-bottom: 12px;
+
+}
+
+.email-details ul {
+
+    margin: 0;
+
+    padding-left: 22px;
+
+}
+
+.email-details li {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #444;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* ================= RIGHT EMAIL IMAGES ================= */
+
+.email-images {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+    width: 100%;
+
+}
+
+
+/* EACH IMAGE HAS ITS OWN SIZE */
+
+.email-image-card {
+
+    width: 100%;
+
+    background: #fff;
+
+    border: 1px solid #E2E2E5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.04);
+
+    transition: .35s;
+
+}
+
+.email-image-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* KEEP ORIGINAL IMAGE PROPORTIONS */
+
+.email-image-card img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .email-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+    .email-content {
+
+        max-width: 780px;
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .email-section {
+
+        gap: 35px;
+
+        margin-top: 50px;
+
+    }
+
+    .email-content h2 {
+
+        font-size: 38px;
+
+    }
+
+    .email-content p {
+
+        font-size: 16px;
+
+    }
+
+    .email-images {
+
+        gap: 20px;
+
+    }
+
+}
+
+/* =========================
+   02 EMAIL MARKETING
+========================= */
+
+.email-project {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 0 120px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.email-header {
+    margin-bottom: 55px;
+}
+
+.project-number {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #888;
+    margin: 0 0 24px;
+}
+
+.email-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 500;
+    color: #1D1D1F;
+    margin: 0;
+}
+
+.sample-work {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #888;
+    margin: 4px 0 32px;
+}
+
+.confidentiality {
+    max-width: 1100px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #777;
+    margin: 0 0 38px;
+}
+
+.what-i-do h3 {
+    font-size: 17px;
+    color: #1D1D1F;
+    margin: 0 0 10px;
+}
+
+.what-i-do ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.what-i-do li {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+}
+
+
+/* =========================
+   DESCRIPTION + EMAILS
+========================= */
+
+.email-work-grid {
+    display: grid;
+    grid-template-columns: 0.72fr 1fr 1fr;
+    column-gap: 22px;
+    align-items: stretch;
+}
+
+
+/* =========================
+   LEFT DESCRIPTIONS
+========================= */
+
+.email-descriptions {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    min-height: 455px;
+}
+
+.email-description {
+    display: flex;
+    align-items: center;
+    padding-right: 28px;
+}
+
+.email-description p {
+    margin: 0;
+    width: 235px;
+    font-size: 15px;
+    line-height: 1.65;
+    font-weight: 600;
+    color: #1D1D1F;
+}
+
+/* =========================
+   EMAIL IMAGES
+========================= */
+
+.email-image {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.email-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .email-project {
+        padding: 80px 24px 90px;
+    }
+
+    .email-header h1 {
+        font-size: 42px;
+    }
+
+    .email-work-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+    }
+
+    .email-descriptions {
+        grid-column: 1 / -1;
+        min-height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .email-description {
+        padding-right: 0;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .email-project {
+        padding: 60px 20px 70px;
+    }
+
+    .email-header h1 {
+        font-size: 36px;
+    }
+
+    .email-work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .email-descriptions {
+        grid-column: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .email-description {
+        display: block;
+    }
+
+    .email-image {
+        width: 100%;
+    }
+}
+
+/* =========================
+   EVENT DESIGNS GRID
+========================= */
+
+.event-designs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+}
+
+
+/* =========================
+   EVENT DESIGN CARD
+========================= */
+
+.event-design-card {
+    width: 100%;
+}
+
+
+/* =========================
+   EVENT DESIGN IMAGE
+========================= */
+
+.event-design-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.event-design-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.additional-container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .event-designs-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+/* =========================
+   BACK TO PORTFOLIO
+========================= */
+
+.back-to-portfolio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.back-to-portfolio a {
+    display: inline-block;
+    padding: 12px 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #000000;
+    background: transparent;
+
+    border: 1px solid #000000;
+    border-radius: 999px;
+
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.back-to-portfolio a:hover {
+    background: #1746C7;
+    color: #fff;
+}
+
+/* ======================================
+   FOOTER
+====================================== */
+
+footer {
+    background: white;
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+}
+
+.footer {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.footer-links a {
+    color: var(--light);
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    color: #999;
+    font-size: .95rem;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .social-media-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+    .social-posts {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .screenshot-card {
+
+        max-height: 500px;
+    }
+
+    .email-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+
+        position: absolute;
+    }
+
+    nav {
+
+        display: none;
+    }
+
+    .project-hero {
+
+        min-height: 560px;
+    }
+
+    .hero-content h1 {
+
+        font-size: 3.5rem;
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+    }
+
+    .project-section {
+
+        padding: 80px 0;
+    }
+
+    .section-heading h2 {
+
+        font-size: 3rem;
+    }
+
+    .project-intro p,
+    .email-text p {
+
+        font-size: 16px;
+    }
+
+    .social-posts {
+
+        grid-template-columns: 1fr;
+    }
+
+    .image-card img {
+
+        min-height: 0;
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    .screenshot-card img {
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    .event-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .event-card img {
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    .mailchimp-placeholder {
+
+        min-height: 280px;
+    }
+
+    .footer {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .container {
+
+        width: 92%;
+    }
+
+    .project-hero {
+
+        min-height: 500px;
+    }
+
+    .hero-content {
+
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+
+        font-size: 3rem;
+    }
+
+    .section-heading h2 {
+
+        font-size: 2.6rem;
+    }
+
+    .project-section {
+
+        padding: 70px 0;
+    }
+
+    .event-card {
+
+        border-radius: 18px;
+    }
+
+    .image-card,
+    .screenshot-card {
+
+        border-radius: 18px;
+    }
+
+}
