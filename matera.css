@@ -1,0 +1,1754 @@
+/* =========================================================
+   MATERA CAFE — CASE STUDY
+   Warm Editorial / Premium Café Style
+   ========================================================= */
+
+
+/* =========================================================
+   01. VARIABLES
+   ========================================================= */
+
+:root {
+    --cream: #f7f2e9;
+    --warm-white: #fdfbf6;
+    --dark: #2a2118;
+    --brown: #6b4a34;
+    --light-brown: #d9c9b5;
+    --line: #e2d8c8;
+    --muted: #7a6c5d;
+}
+
+/* =========================================================
+   02. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    background: #f8f7f4;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+header nav a {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #555;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #111;
+}
+
+
+/* =========================================================
+   04. GENERAL
+   ========================================================= */
+
+main {
+    width: 100%;
+}
+
+section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.section-label,
+.eyebrow,
+.visual-label {
+    display: block;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--brown);
+}
+
+/* =========================================================
+   05. HERO
+   ========================================================= */
+
+.hero {
+    padding: 0;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    position: relative;
+
+    width: 100vw;
+    height: 680px;
+
+    margin-left: calc(50% - 50vw);
+
+    overflow: hidden;
+
+    background: var(--light-brown);
+}
+
+.hero-image > img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* DARK GRADIENT */
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.70) 0%,
+        rgba(0, 0, 0, 0.30) 45%,
+        rgba(0, 0, 0, 0.05) 75%,
+        rgba(0, 0, 0, 0) 100%
+    );
+
+    z-index: 1;
+}
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    max-width: 900px;
+
+    z-index: 2;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+/* CASE STUDY */
+
+.hero-overlay .eyebrow {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+/* MATERA CAFE */
+
+.hero-overlay h1 {
+    margin: 0 0 24px 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    color: #ffffff;
+
+    font-size: clamp(65px, 8vw, 110px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+
+    text-align: center;
+}
+
+
+/* SPECIALTY COFFEE */
+
+.hero-overlay .hero-subtitle {
+    display: block;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto 18px auto;
+
+    color: #ffffff;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+/* DESCRIPTION */
+
+.hero-overlay .hero-description {
+    display: block;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+/* =========================================================
+   MOBILE HERO
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding-top: 25px;
+        padding-bottom: 75px;
+    }
+
+    .hero-image {
+        height: 600px;
+    }
+
+    .hero-overlay {
+        width: 88%;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-overlay .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+
+        margin-bottom: 15px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 58px;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 20px;
+    }
+
+    .hero-overlay .hero-subtitle {
+        font-size: 12px;
+
+        line-height: 1.5;
+
+        letter-spacing: 0.7px;
+
+        margin-bottom: 15px;
+    }
+
+    .hero-overlay .hero-description {
+        max-width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+}
+
+/* =========================================================
+   ABOUT THE BUSINESS
+   ========================================================= */
+
+.intro-section {
+    padding-top: 90px;
+    padding-bottom: 120px;
+
+    border-top: 1px solid var(--line);
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   LEFT — LABEL + PHOTO
+   ========================================================= */
+
+.about-left {
+    width: 100%;
+}
+
+.intro-label {
+    margin-bottom: 28px;
+}
+
+.intro-label span {
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--brown);
+}
+
+
+/* =========================================================
+   CAFE PHOTO
+   ========================================================= */
+
+.about-image {
+    width: 100%;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background: var(--light-brown);
+}
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   RIGHT — TITLE + DESCRIPTION
+   ========================================================= */
+
+.intro-text {
+    width: 100%;
+    max-width: 800px;
+
+    /* Align title with the top of the photo */
+    padding-top: 38px;
+}
+
+.intro-text h2 {
+    max-width: 800px;
+
+    margin: 0 0 35px 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(45px, 4.5vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -1.5px;
+
+    color: var(--dark);
+
+    text-align: left;
+}
+
+.intro-text p {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .intro-section {
+        grid-template-columns: 40% 60%;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 380px;
+    }
+
+    .intro-text h2 {
+        font-size: 52px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .intro-section {
+        padding-top: 70px;
+        padding-bottom: 75px;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .intro-label {
+        padding-top: 0;
+    }
+
+    .about-image {
+        margin-top: 25px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .intro-text h2 {
+        font-size: 48px;
+
+        margin-bottom: 25px;
+    }
+
+    .intro-text p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+}
+
+/* =========================
+   PROJECT OVERVIEW
+   PROBLEM + SOLUTION ONLY
+========================= */
+
+/* Two equal columns */
+.overview-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px;
+    margin-top: 45px;
+}
+
+
+/* Each Problem → Solution flow */
+.overview-column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+/* =========================
+   PROBLEM
+========================= */
+
+.problem-block {
+    border: 1px solid #d8d1c7;
+    border-radius: 16px;
+    padding: 28px 35px 30px;
+    min-height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* Label */
+.problem-block .overview-label {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #744827;
+    color: #ffffff;
+
+    padding: 10px 48px;
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* Problem title */
+.problem-block h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    margin: 18px 0 0;
+    text-align: center;
+}
+
+
+/* =========================
+   ARROW
+========================= */
+
+.arrow {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 22px auto;
+
+    background: #744827;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+    line-height: 1;
+}
+
+
+/* =========================
+   SOLUTION
+========================= */
+
+.solution-block {
+    border: 1px solid #d8d1c7;
+    border-radius: 16px;
+
+    padding: 34px 35px 30px;
+
+    min-height: 260px;
+    position: relative;
+}
+
+
+/* Solution label */
+.solution-block .overview-label {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #4b6330;
+    color: #ffffff;
+
+    padding: 10px 42px;
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* Solution title */
+.solution-block h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    margin: 15px 0 18px;
+}
+
+
+/* =========================
+   BULLET LIST
+========================= */
+
+.solution-block ul {
+    margin: 0;
+    padding-left: 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.solution-block li {
+    padding-left: 5px;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .overview-columns {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .problem-block,
+    .solution-block {
+        min-height: auto;
+    }
+
+}
+
+/* =========================
+   FIX OVERVIEW TITLE
+========================= */
+
+.overview-header h2 {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 65px !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+    margin: 0 0 22px 0 !important;
+}
+
+
+/* =========================
+   ADD SPACE BELOW INFOGRAPHIC
+========================= */
+
+.overview-section {
+    padding-bottom: 120px !important;
+}
+
+
+/* KEEP SOLUTION CARDS FULLY VISIBLE */
+
+.overview-columns {
+    padding-bottom: 20px;
+}
+
+/* =========================================================
+   08. MY RESPONSIBILITIES
+   ========================================================= */
+
+.responsibilities-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    border-top: 1px solid var(--line);
+
+    background-color: #4A3025;
+
+    width: 100vw;
+    max-width: none;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.responsibilities-header {
+    margin-bottom: 55px;
+}
+
+.responsibilities-header .section-label {
+    margin-bottom: 25px;
+
+    color: #ffffff;
+}
+
+.responsibilities-header h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+}
+
+.responsibilities-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.responsibility-card {
+    min-height: 260px;
+
+    padding: 35px;
+
+    background-color: #F4EFE7;
+
+    border: 1px solid var(--line);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 25px;
+}
+
+.responsibility-number {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #4A3025;
+
+    margin: 0;
+}
+
+.responsibility-card h3 {
+    margin: 0;
+
+    max-width: 80%;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    color: #4A3025;
+
+    text-align: center;
+}
+
+/* =========================================================
+   09. CASE STUDY SECTIONS
+   ========================================================= */
+
+.case-section {
+    padding-top: 110px;
+    padding-bottom: 120px;
+
+    border-top: 1px solid var(--line);
+}
+
+.case-heading {
+    margin-bottom: 65px;
+}
+
+.case-number {
+    display: block;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 24px;
+    color: var(--brown);
+
+    margin-bottom: 15px;
+}
+
+.case-heading h2 {
+    max-width: 850px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(48px, 6vw, 85px);
+    font-weight: 500;
+    line-height: 0.92;
+}
+
+.case-heading p {
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* =========================
+   CONTENT CALENDAR SECTION
+========================= */
+
+.work-section {
+    max-width: 1280px !important;
+    width: calc(100% - 160px) !important;
+    margin: 100px auto !important;
+    padding: 35px !important;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.work-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+
+    width: 100% !important;
+    margin: 0 0 70px 0 !important;
+}
+
+.work-title .number {
+    flex: 0 0 auto;
+}
+
+.work-title h2 {
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================
+   TWO COLUMN LAYOUT
+========================= */
+
+.calendar-layout {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 820px)
+        360px !important;
+
+    gap: 100px !important;
+
+    width: 100% !important;
+
+    align-items: start !important;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.calendar-content {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.work-block {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.work-block + .work-block {
+    margin-top: 100px !important;
+}
+
+
+/* CONTENT TITLE */
+
+.work-block h3 {
+    margin: 0 0 20px 0 !important;
+}
+
+
+/* DESCRIPTION */
+
+.work-block p {
+    max-width: 700px !important;
+    margin: 0 0 35px 0 !important;
+
+    line-height: 1.7 !important;
+}
+
+
+/* =========================
+   CALENDAR IMAGES
+========================= */
+
+.landscape-image {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.landscape-image img {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    object-fit: contain !important;
+}
+
+
+/* =========================
+   INSTAGRAM SIDE
+========================= */
+
+.instagram-feed {
+    width: 360px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    justify-self: end !important;
+}
+
+.visual-label {
+    display: block !important;
+
+    margin: 0 0 15px 0 !important;
+}
+
+
+/* INSTAGRAM IMAGE */
+
+.phone-frame {
+    width: 100% !important;
+
+    max-width: none !important;
+
+    margin: 0 !important;
+}
+
+.phone-frame img {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* =========================
+   02. COMMUNITY MANAGEMENT
+========================= */
+
+.community-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* MAIN TITLE */
+.community-section .work-title {
+    margin-bottom: 10px;
+}
+
+/* INTRODUCTION */
+
+.community-intro {
+    max-width: 800px;
+    margin: 0 0 35px 0;
+    line-height: 0.10;
+}
+
+
+/* WHAT I DID */
+
+.what-i-did-title {
+    margin: 0 0 30px 0;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* THREE DESCRIPTIONS */
+
+.community-description {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+
+.description-item span {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+
+.description-item h3 {
+    margin: 0 0 12px 0;
+}
+
+
+.description-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* THREE VISUAL EXAMPLES */
+
+.community-visuals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* FULL IMAGE — NO CROPPING */
+
+.visual-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* IMAGE LABEL */
+
+.visual-item h3 {
+    margin: 15px 0 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/* =========================
+   FIX COMMUNITY TITLE GAP
+========================= */
+
+.community-section .work-title {
+    margin-bottom: 30px !important;
+}
+
+.community-section .community-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.community-section .community-intro {
+    margin-top: 0 !important;
+}
+
+
+/* =========================
+   03 DESIGN SUPPORT
+========================= */
+
+.design-support-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 80px auto;
+}
+
+
+/* TITLE */
+
+.design-support-section .work-title {
+    margin-bottom: 15px;
+}
+
+
+/* THREE DESIGNS */
+
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+
+/* DESIGN ITEM */
+
+.design-item {
+    width: 100%;
+}
+
+
+/* IMAGE / VIDEO */
+
+.design-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.design-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* VIDEO */
+
+.design-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* DESIGN SUPPORT SPACING */
+
+.design-support-section .work-title {
+    margin-bottom: 15px;
+}
+
+.design-support-intro {
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+
+/* FIX DESIGN SUPPORT TITLE SPACING */
+
+.design-support-section .work-title {
+    margin-bottom: 10px !important;
+}
+
+.design-support-section .design-support-intro {
+    margin-top: 30px !important;
+    margin-bottom:30px !important;
+}
+
+/* =========================
+   SKILLS DEMONSTRATED
+========================= */
+
+/* TITLE - MATCH OTHER PROJECT TITLES */
+
+.section-label {
+    margin-bottom: 30px;
+}
+
+.skills-title {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0 0 45px 0;
+    white-space: nowrap;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    row-gap: 0;
+    margin-top: 45px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 24px 0;
+
+    border-top: 1px solid #d8d1c7;
+
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.skill-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid #d8d1c7;
+}
+
+.check {
+    flex-shrink: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   05 PROJECT OUTCOME
+========================= */
+
+.outcome-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    background-color: #4A3025;
+
+    width: 100vw;
+    max-width: none;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    color: #F5F0E8;
+}
+
+.outcome-section > .outcome-label,
+.outcome-section > .outcome-title,
+.outcome-section > .outcome-flow,
+.outcome-section > .outcome-list {
+    width: 1075px !important;
+    max-width: calc(100vw - 80px) !important;
+
+    margin-left: calc((100% - 1075px) / 2 - 30px) !important;
+    margin-right: auto !important;
+}
+
+.skills-section {
+    padding-bottom: 100px;
+}
+.outcome-list {
+    width: 1080px;
+}
+
+/* =========================
+   PROJECT OUTCOME ALIGNMENT
+========================= */
+
+/* =========================
+   05 PROJECT OUTCOME
+   ALIGN WITH PAGE CONTENT
+========================= */
+
+.outcome-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    background-color: #4A3025;
+
+    width: 100vw;
+    max-width: none;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    box-sizing: border-box;
+
+    color: #F5F0E8;
+}
+
+
+/* Match the exact content width of the sections above */
+
+.outcome-section > .outcome-label,
+.outcome-section > .outcome-title,
+.outcome-section > .outcome-flow,
+.outcome-section > .outcome-list {
+    width: 1075px !important;
+    max-width: calc(100vw - 80px) !important;
+
+    margin-left: calc((100% - 1075px) / 2 - 30px) !important;
+    margin-right: auto !important;
+}
+
+footer .container.footer {
+    position: relative;
+    left: -95px;
+}
+
+/* Keep the two-column outcome layout */
+
+.outcome-list {
+    width: 1075px !important;
+}
+
+.outcome-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 12px 0;
+}
+
+.outcome-title {
+    font-family: Georgia, serif;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+    max-width: 1000px;
+    margin-top: 30px
+}
+
+.outcome-flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin: 45px 0;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.outcome-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+}
+
+.outcome-item {
+    display: flex;
+    gap: 12px;
+
+    padding: 24px 0;
+
+    border-top: 1px solid #d8d1c7;
+}
+
+.outcome-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid #d8d1c7;
+}
+
+.outcome-check {
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.outcome-item p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =========================
+   BACK TO PORTFOLIO
+========================= */
+
+.back-to-portfolio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.back-to-portfolio a {
+    display: inline-block;
+    padding: 12px 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #5A3828;
+    background: transparent;
+
+    border: 1px solid #5A3828;
+    border-radius: 999px;
+
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.back-to-portfolio a:hover {
+    background: #5A3828;
+    color: #fff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid #e5e5e5;
+    background: #f8f7f4;
+    padding: 35px
+}
+
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+.footer-logo {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+.footer-links a {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #111;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    margin-top: 45px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #999;
+}
+
+
+/* =========================================================
+   17. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .intro-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .overview-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .overview-right {
+        padding-top: 0;
+    }
+
+    .calendar-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .instagram-column {
+        position: static;
+    }
+
+    .instagram-frame {
+        margin-left: 0;
+        max-width: 360px;
+    }
+
+    .community-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .design-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .reel-column {
+        position: static;
+    }
+
+    .reel-wrapper {
+        margin-left: 0;
+        max-width: 380px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .outcome-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .outcome-right {
+        padding-top: 0;
+    }
+}
+
+/* =========================================================
+   18. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .site-header {
+        padding: 22px 6%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero {
+        padding-top: 25px;
+        padding-bottom: 75px;
+    }
+
+    .hero-image {
+        height: 390px;
+    }
+
+    .hero-content {
+        padding-top: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+        letter-spacing: -2px;
+    }
+
+    .hero-meta {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .intro-section,
+    .overview-section,
+    .responsibilities,
+    .case-section,
+    .skills-section,
+    .outcome-section {
+        padding-top: 70px;
+        padding-bottom: 75px;
+    }
+
+    .intro-text h2 {
+        font-size: 48px;
+    }
+
+    .overview-left h2 {
+        font-size: 50px;
+    }
+
+    .responsibilities-title h2 {
+        font-size: 55px;
+    }
+
+    .responsibility-item {
+        grid-template-columns: 55px 1fr;
+        gap: 15px;
+    }
+
+    .responsibility-name {
+        font-size: 24px;
+    }
+
+    .case-heading h2 {
+        font-size: 55px;
+    }
+
+    .calendar-left {
+        gap: 50px;
+    }
+
+    .work-block h3 {
+        font-size: 32px;
+    }
+
+    .calendar-grid,
+    .design-grid {
+        gap: 45px;
+    }
+
+    .instagram-frame,
+    .reel-wrapper {
+        max-width: 100%;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .community-image {
+        width: 100%;
+    }
+
+    .community-description p {
+        font-size: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+@media (max-width: 650px) {
+
+.hero {
+    padding-top: 25px;
+    padding-bottom: 75px;
+}
+
+.hero-image {
+    height: 600px;
+}
+
+.hero-overlay {
+    left: 7%;
+    right: 7%;
+    bottom: 40px;
+}
+
+.hero-overlay h1 {
+    font-size: 58px;
+    letter-spacing: -2px;
+}
+
+.hero-overlay .hero-subtitle {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.hero-overlay .hero-description {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Move Project Outcome content slightly left */
+.project-outcome .container {
+    transform: translateX(10px);
+}
+
+/* Move Footer content slightly left */
+footer .container {
+    transform: translateX(10px);
+}
+
